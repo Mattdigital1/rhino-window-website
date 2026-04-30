@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Window Tint Services — Rhino Window Tint · St Amant, LA</title>
+<meta name="description" content="Premium ceramic, carbon, and dyed window tint installation in St Amant, LA. Lifetime warranty. 5.0★ across 260+ reviews." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23ff2d1f'/><path d='M22 18h12c8 0 14 5 14 13s-6 13-14 13H22V18zm0 4v18h12c5 0 9-4 9-9s-4-9-9-9H22z' fill='white'/></svg>" />
+<style>
+  /* Shade ladder */
+  .shade-ladder {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;
+  }
+  @media (max-width: 700px) { .shade-ladder { grid-template-columns: repeat(2, 1fr); } }
+  .shade-card {
+    position: relative;
+    aspect-ratio: 4/5;
+    border-radius: var(--r-md);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 16px;
+    background: linear-gradient(180deg, rgba(255,247,232,1) 0%, rgba(255,213,138,1) 40%, rgba(108,72,17,1) 100%);
+    color: #fff;
+    transition: transform .35s var(--ease), border-color .3s ease;
+  }
+  .shade-card:hover { transform: translateY(-4px); border-color: var(--line-2); }
+  .shade-card .veil { position: absolute; inset: 0; pointer-events: none; }
+  .shade-card .pct {
+    position: relative; z-index: 2;
+    font-family: 'Anton', sans-serif; font-size: 56px; line-height: 1;
+    background: var(--grad);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .shade-card .lbl {
+    position: relative; z-index: 2;
+    font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: #fff;
+  }
+  .shade-card .desc {
+    position: relative; z-index: 2;
+    font-size: 11px; color: rgba(255,255,255,.85); margin-top: 2px;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17V8h7c2.5 0 4 1.5 4 4s-1.5 4-4 4H8m6 0 4 4M6 17h2"/></svg></span>
+      Rhino <span class="thin">Window Tint</span>
+    </a>
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link active" href="services.html">Services</a>
+      <a class="nav-link" href="gallery.html">Gallery</a>
+      <a class="nav-link" href="reviews.html">Reviews</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="phone-link" href="tel:+12252107353"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (225) 210-7353</a>
+      <a class="btn btn-primary header-cta" href="contact.html">Get Quote</a>
+      <button class="menu-toggle" aria-label="Open menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav">
+  <a class="nav-link" href="index.html">Home</a>
+  <a class="nav-link" href="services.html">Services</a>
+  <a class="nav-link" href="gallery.html">Gallery</a>
+  <a class="nav-link" href="reviews.html">Reviews</a>
+  <a class="nav-link" href="about.html">About</a>
+  <a class="nav-link" href="contact.html">Contact</a>
+  <a class="btn btn-primary mobile-cta" href="contact.html">Get Quote</a>
+  <div class="mobile-meta">44014 LA-431 · St Amant, LA · (225) 210-7353</div>
+</nav>
+
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Home</a> <span>/</span> <span>Services</span></div>
+    <h1 data-reveal><span class="stroke">Window tint.</span><br/><span class="gradient-text">Done right.</span></h1>
+    <p class="lead" data-reveal data-reveal-delay="1">One thing, done at the highest level. Three film tiers, every legal shade, every make and model — installed by perfectionists in our climate-controlled bay.</p>
+    <div class="pills mt-md" data-reveal data-reveal-delay="2">
+      <span class="pill dot">Ceramic</span>
+      <span class="pill dot">Carbon</span>
+      <span class="pill dot">Dyed</span>
+      <span class="pill dot">Cars · Trucks · SUVs</span>
+      <span class="pill dot">Lifetime Warranty</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FILM TIERS ========== -->
+<section>
+  <div class="container" style="display:flex;flex-direction:column;gap:24px;">
+
+    <article id="ceramic" class="svc-block" data-reveal>
+      <div class="svc-image" style="background-image:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80');background-size:cover;background-position:center;">
+        <span class="label">Premium tier</span>
+      </div>
+      <div class="svc-content">
+        <div class="eyebrow">01 · Ceramic Tint</div>
+        <h3 class="mt-md">Nano-ceramic.<br/>The good stuff.</h3>
+        <p class="mt-md">Real nano-ceramic film — the top of the food chain. Ceramic particles block heat without going dark, reject 99% of UV, and never interfere with phone, GPS, or radar signals. Ideal for Louisiana summers when your dash feels like a frying pan.</p>
+        <ul class="svc-bullets">
+          <li>Up to 80% IR (heat) rejection</li>
+          <li>99% UV block — protects skin &amp; interior</li>
+          <li>Crystal-clear visibility, no purple fade</li>
+          <li>Zero signal interference (phone, GPS, toll, radar)</li>
+          <li>Lifetime warranty, transferable on resale</li>
+        </ul>
+        <div class="price"><span class="from">From</span> $399 <span class="from">· full vehicle</span></div>
+        <div class="form-actions"><a class="btn btn-primary" href="contact.html">Quote ceramic</a></div>
+      </div>
+    </article>
+
+    <article id="carbon" class="svc-block" data-reveal>
+      <div class="svc-image" style="background-image:url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1200&q=80');background-size:cover;background-position:center;">
+        <span class="label">Mid tier</span>
+      </div>
+      <div class="svc-content">
+        <div class="eyebrow">02 · Carbon Tint</div>
+        <h3 class="mt-md">Deep black.<br/>Built to last.</h3>
+        <p class="mt-md">Solid daily-driver pick. Carbon-infused film looks deep black, won't fade purple, and rejects more heat than dyed film. Doesn't quite hit ceramic's IR numbers — but for the price, it's hard to beat.</p>
+        <ul class="svc-bullets">
+          <li>~50% IR heat rejection</li>
+          <li>99% UV block</li>
+          <li>True black look, never turns purple</li>
+          <li>Lifetime warranty</li>
+        </ul>
+        <div class="price"><span class="from">From</span> $279 <span class="from">· full vehicle</span></div>
+        <div class="form-actions"><a class="btn btn-primary" href="contact.html">Quote carbon</a></div>
+      </div>
+    </article>
+
+    <article id="dyed" class="svc-block" data-reveal>
+      <div class="svc-image" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80');background-size:cover;background-position:center;">
+        <span class="label">Entry tier</span>
+      </div>
+      <div class="svc-content">
+        <div class="eyebrow">03 · Standard (Dyed)</div>
+        <h3 class="mt-md">Clean look.<br/>Honest price.</h3>
+        <p class="mt-md">When you just want the look at a fair price. Dyed film delivers a classic black appearance and decent UV protection — perfect for budget builds, lease vehicles, or rear-only jobs. We use a higher-grade dyed film than most shops, so it lasts longer before any color shift.</p>
+        <ul class="svc-bullets">
+          <li>Classic black look</li>
+          <li>~99% UV block</li>
+          <li>Mild heat rejection</li>
+          <li>5-year warranty</li>
+        </ul>
+        <div class="price"><span class="from">From</span> $179 <span class="from">· full vehicle</span></div>
+        <div class="form-actions"><a class="btn btn-primary" href="contact.html">Quote standard</a></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ========== SHADE LADDER ========== -->
+<section style="background:var(--bg-2);">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" data-reveal>Shade guide</div>
+        <h2 data-reveal data-reveal-delay="1">Pick your<br/><span class="gradient-text">VLT.</span></h2>
+      </div>
+      <p class="lead" data-reveal data-reveal-delay="2">VLT (Visible Light Transmittance) is the percentage of light that passes through. Lower number = darker tint. <strong>Louisiana law: front sides must be 40% or higher.</strong> Rear glass and rear sides — fair game.</p>
+    </div>
+
+    <div class="shade-ladder" data-reveal>
+      <div class="shade-card" style="background: linear-gradient(180deg,#ffffff 0%,#f5f5f5 60%,#1a1a1a 100%);">
+        <div class="lbl" style="color:#1a1a1a;">Lightest</div>
+        <div>
+          <div class="pct">70%</div>
+          <div class="desc" style="color:#1a1a1a;">Heat rejection · barely-there look · windshield-legal</div>
+        </div>
+      </div>
+      <div class="shade-card" style="background: linear-gradient(180deg,rgba(255,255,255,.92) 0%,rgba(60,8,8,.95) 100%);">
+        <div class="lbl">50%</div>
+        <div>
+          <div class="pct">50%</div>
+          <div class="desc">Subtle, factory-style. Front sides legal in many states.</div>
+        </div>
+      </div>
+      <div class="shade-card" style="background: linear-gradient(180deg,rgba(232,38,29,.55) 0%,rgba(8,8,8,.98) 100%);">
+        <div class="lbl">Most popular</div>
+        <div>
+          <div class="pct">35%</div>
+          <div class="desc">Sleek, balanced look. Visible from the outside.</div>
+        </div>
+      </div>
+      <div class="shade-card" style="background: linear-gradient(180deg,rgba(120,15,10,.4) 0%,rgba(0,0,0,1) 100%);">
+        <div class="lbl">Aggressive</div>
+        <div>
+          <div class="pct">20%</div>
+          <div class="desc">Dark, mean look. Limited visibility from outside.</div>
+        </div>
+      </div>
+      <div class="shade-card" style="background: linear-gradient(180deg,rgba(120,15,10,.15) 0%,rgba(0,0,0,1) 100%);">
+        <div class="lbl">Limo</div>
+        <div>
+          <div class="pct">5%</div>
+          <div class="desc">Total privacy. Rear glass &amp; rear sides only in LA.</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="dim mt-lg center" style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;">Not sure? <a href="contact.html" class="btn-text" style="display:inline;">Tell us your vehicle <span class="arrow">→</span></a> we'll recommend a shade.</p>
+  </div>
+</section>
+
+<!-- ========== WHY US ========== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" data-reveal>The Rhino difference</div>
+        <h2 data-reveal data-reveal-delay="1">No bubbles.<br/><span class="gradient-text">No bullshit.</span></h2>
+      </div>
+      <p class="lead" data-reveal data-reveal-delay="2">If you've ever paid for "tint" and watched it bubble in 90 days — you know cheap installs cost more in the end. We don't compete on price. We compete on craft.</p>
+    </div>
+
+    <div class="two-col">
+      <ul class="feat-list">
+        <li data-reveal><div class="b">A</div><div><div class="t">Computer-cut precision</div><div class="s">Every piece is plotted from the manufacturer pattern — no razor near your weather seals.</div></div></li>
+        <li data-reveal data-reveal-delay="1"><div class="b">B</div><div><div class="t">Climate-controlled bay</div><div class="s">Filtered, dust-controlled environment. The reason your install looks like glass — not snow.</div></div></li>
+        <li data-reveal data-reveal-delay="2"><div class="b">C</div><div><div class="t">Lifetime warranty</div><div class="s">Bubbles, peels, fade, delamination — covered. Forever. Transferable on resale.</div></div></li>
+        <li data-reveal data-reveal-delay="3"><div class="b">D</div><div><div class="t">Real ceramic, real specs</div><div class="s">We can show you the spec sheets. Spectro readings on request. No vague "ceramic blend" claims.</div></div></li>
+      </ul>
+      <ul class="feat-list">
+        <li data-reveal><div class="b">E</div><div><div class="t">Licensed &amp; insured</div><div class="s">Fully covered for fleet, business, and high-value builds. Insurance certificates on request.</div></div></li>
+        <li data-reveal data-reveal-delay="1"><div class="b">F</div><div><div class="t">Same-day jobs</div><div class="s">Most full vehicles complete in 2–3 hours. Schedule online, watch from our waiting area, or drop and go.</div></div></li>
+        <li data-reveal data-reveal-delay="2"><div class="b">G</div><div><div class="t">Local-owned, locally proven</div><div class="s">5.0★ across 260+ Google reviews. We live and work in Ascension Parish — your reputation is our reputation.</div></div></li>
+        <li data-reveal data-reveal-delay="3"><div class="b">H</div><div><div class="t">Honest pricing</div><div class="s">Quoted upfront, no surprises, no upsells. What we say is what you pay.</div></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="section-tight">
+  <div class="container">
+    <div class="cta-banner" data-reveal>
+      <div>
+        <div class="eyebrow">Quote in 60 seconds</div>
+        <h2 class="mt-md">Tell us your<br/>build.</h2>
+        <p class="lead mt-md">Vehicle, film tier, shade — that's all we need. Same-day price, same-week appointment.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="contact.html">Start your quote
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+12252107353">Call (225) 210-7353</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17V8h7c2.5 0 4 1.5 4 4s-1.5 4-4 4H8m6 0 4 4M6 17h2"/></svg></span>Rhino <span class="thin">Window Tint</span></a>
+        <p style="margin-top:20px;">Premium ceramic, carbon, and dyed window tint installation. Locally owned in St Amant, LA — proudly serving Ascension, Livingston, and East Baton Rouge.</p>
+        <div class="pills" style="margin-top:16px;"><span class="pill dot">Licensed</span><span class="pill dot">Insured</span><span class="pill dot">Lifetime warranty</span></div>
+      </div>
+      <div class="footer-col"><h5>Site</h5><a href="index.html">Home</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="reviews.html">Reviews</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Visit</h5><a href="https://maps.google.com/?q=44014+LA-431,+Saint+Amant,+LA+70774" target="_blank" rel="noopener">44014 LA-431<br/>St Amant, LA 70774</a><a href="tel:+12252107353">(225) 210-7353</a><a>Mon–Sat · 8:00–17:00</a><a>Closed Sunday</a></div>
+      <div class="footer-col"><h5>Follow</h5><a href="https://www.instagram.com/rhino.tint/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/Killa.Kustoms.llc/" target="_blank" rel="noopener">Facebook</a><a href="https://www.google.com/maps/search/Rhino+Window+Tint+Saint+Amant+LA" target="_blank" rel="noopener">Google Business</a></div>
+    </div>
+    <div class="footer-mega">SERVICES</div>
+    <div class="footer-base"><span>© 2026 Rhino Window Tint · All rights reserved.</span><span>St Amant · Gonzales · Baton Rouge · Prairieville · Denham Springs</span></div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
