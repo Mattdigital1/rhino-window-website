@@ -220,19 +220,50 @@
       }
     });
 
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', async e => {
       e.preventDefault();
-      // Replace with real backend submission. For now we display a thank-you state.
-      form.querySelector('.form-shell').innerHTML = `
-        <div class="form-success">
-          <div class="check"><svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <h3 style="font-family:'Anton',sans-serif;text-transform:uppercase;font-size:48px;letter-spacing:-0.01em;line-height:1;margin-bottom:12px;">Quote received</h3>
-          <p style="max-width:48ch;margin:0 auto;color:var(--ink-2);">Thanks — we got your details. A team member will reach out within one business day with your custom quote and next available appointment.</p>
-          <div style="margin-top:24px;display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;">
-            <a class="btn btn-ghost" href="tel:+12252107353">Call (225) 210-7353</a>
-            <a class="btn btn-primary" href="index.html">Back to home</a>
-          </div>
-        </div>`;
+      const submitBtn = form.querySelector('[type="submit"]');
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+
+      const tierSel = steps[0].querySelector('.choice.selected .t');
+      const shadeSel = steps[2].querySelector('.choice.selected .t');
+
+      const payload = {
+        film_tier:    tierSel  ? tierSel.textContent  : '',
+        shade:        shadeSel ? shadeSel.textContent : '',
+        vehicle_year: form.querySelector('#year')?.value    || '',
+        vehicle_make: form.querySelector('#make')?.value    || '',
+        vehicle_model:form.querySelector('#model')?.value   || '',
+        body_type:    form.querySelector('#bodytype')?.value|| '',
+        notes:        form.querySelector('#notes')?.value   || '',
+        name:         form.querySelector('#name')?.value    || '',
+        phone:        form.querySelector('#phone')?.value   || '',
+        email:        form.querySelector('#email')?.value   || '',
+        best_time:    form.querySelector('#when')?.value    || ''
+      };
+
+      try {
+        const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+          method: 'POST',
+          body: JSON.stringify(payload),
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+        });
+        if (!res.ok) throw new Error('server');
+        form.querySelector('.form-shell').innerHTML = `
+          <div class="form-success">
+            <div class="check"><svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <h3 style="font-family:'Anton',sans-serif;text-transform:uppercase;font-size:48px;letter-spacing:-0.01em;line-height:1;margin-bottom:12px;">Quote received</h3>
+            <p style="max-width:48ch;margin:0 auto;color:var(--ink-2);">Thanks — we got your details. A team member will reach out within one business day with your custom quote and next available appointment.</p>
+            <div style="margin-top:24px;display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+              <a class="btn btn-ghost" href="tel:+12252107353">Call (225) 210-7353</a>
+              <a class="btn btn-primary" href="index.html">Back to home</a>
+            </div>
+          </div>`;
+      } catch {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send my quote request →'; }
+        const err = steps[idx].querySelector('.form-error');
+        if (err) err.textContent = 'Something went wrong — please call us at (225) 210-7353.';
+      }
     });
 
     show(0);
